@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', function(e){
+    e.preventDefault();
+    const id = this.getAttribute('href');
+    document.querySelector(id).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+<body>
+
+    <header>
+        <div class="container header-inner">
+    <div class="logo">
+      <img src="images/logo.png" alt="MyLogo" />
+      <span class="brand">MyAgency</span>
+    </div>
+    <nav class="main-nav">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section id="hero" class="hero">
+        <h2>This is my first website</h2>
+        <p>Made using HTML + CSS</p>
+        <a href="#" class="btn">Learn More</a>
+    </section>
+    <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+        <div class="card">
+            <h3>Web Design</h3>
+            <p>Beautiful and modern websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Fast and responsive development.</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Marketing</h3>
+            <p>Grow your business online.</p>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+        We create professional websites, responsive designs and digital solutions.
+        This is a demo website created using HTML & CSS only.
+    </p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+    <footer>
+        <p>© 2025 My Website</p>
+    </footer>
+
+
+</body>
+</html>
