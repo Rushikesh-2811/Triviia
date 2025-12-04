@@ -1,90 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Strong Agency Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', function(e){
-    e.preventDefault();
-    const id = this.getAttribute('href');
-    document.querySelector(id).scrollIntoView({behavior:'smooth'});
-  });
-});
-</script>
+
 <body>
 
-    <header>
-        <div class="container header-inner">
-    <div class="logo">
-      <img src="images/logo.png" alt="MyLogo" />
-      <span class="brand">MyAgency</span>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div>Welcome to our agency</div>
+      <div>Professional Web Solutions</div>
     </div>
-    <nav class="main-nav">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </div>
 
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <section id="hero" class="hero">
-        <h2>This is my first website</h2>
-        <p>Made using HTML + CSS</p>
-        <a href="#" class="btn">Learn More</a>
-    </section>
-    <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-box">
-        <div class="card">
-            <h3>Web Design</h3>
-            <p>Beautiful and modern websites.</p>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">A</div>
+        <div>
+          <b>Agency</b>
+          <div class="muted" style="font-size:13px">Creative Solutions</div>
         </div>
+      </div>
 
-        <div class="card">
-            <h3>Web Development</h3>
-            <p>Fast and responsive development.</p>
-        </div>
-
-        <div class="card">
-            <h3>Digital Marketing</h3>
-            <p>Grow your business online.</p>
-        </div>
+      <nav class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
     </div>
-</section>
 
-    <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>
-        We create professional websites, responsive designs and digital solutions.
-        This is a demo website created using HTML & CSS only.
-    </p>
-</section>
+    <!-- Hero -->
+    <div class="container hero">
+      <div class="hero-left">
+        <h1>We Build Modern & Clean Websites</h1>
+        <p>Professional UI/UX, web development, branding and digital services for growing businesses.</p>
 
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-</section>
-    <footer>
-        <p>© 2025 My Website</p>
-    </footer>
+        <div class="hero-legend">
+          <div class="badge">Modern Design</div>
+          <div class="badge">Fast Websites</div>
+          <div class="badge">SEO Ready</div>
+        </div>
 
+        <div style="margin-top:18px;">
+          <a class="nav-cta" href="#contact">Start a Project</a>
+        </div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="img-box">
+        <div   class="hero-image">
+            <h2> Hero Image</h2>
+        </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <h4>Our Vision</h4>
+          <p class="muted" style="font-size:14px">
+            We focus on high-quality UI and a great user experience to help your business perform online.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <div class="container">
+    <section id="services" class="services">
+      <div class="card">
+        <h3>Web Design</h3>
+        <p>Responsive and modern UI for your brand.</p>
+      </div>
+
+      <div class="card">
+        <h3>Development</h3>
+        <p>Fast, optimized and secure websites.</p>
+      </div>
+
+      <div class="card">
+        <h3>Branding</h3>
+        <p>Identity design that reflects your vision.</p>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="numbers">
+      <div class="num">
+        <b>120+</b>
+        <p>Projects Completed</p>
+      </div>
+
+      <div class="num">
+        <b>99%</b>
+        <p>Client Satisfaction</p>
+      </div>
+
+      <div class="num">
+        <b>5+</b>
+        <p>Years Experience</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+      <div class="proj">
+        <h4>Corporate Website</h4>
+        <p class="muted">Clean modern design & responsive UI.</p>
+      </div>
+
+      <div class="proj">
+        <h4>Online Shop</h4>
+        <p class="muted">E-commerce with full management system.</p>
+      </div>
+
+      <div class="proj">
+        <h4>Web App</h4>
+        <p class="muted">Custom dashboards & admin panels.</p>
+      </div>
+    </section>
+
+    <!-- Contact (NO address, NO phone) -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+
+      <input type="text" placeholder="Your Name" /> <br>
+      <input type="email" placeholder="Your Email" /> <br>
+      <textarea rows="4" placeholder="Message"></textarea> <br>
+      <button>Send Message</button>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Agency — Clean Web Design
+  </footer>
+  <link rel="stylesheet" href="style.css">
 
 </body>
 </html>
